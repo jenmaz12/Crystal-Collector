@@ -15,7 +15,7 @@ var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
 var imageCrystal = $("<img>");
 
 // assign value randomly from array above
-imageCrystal.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+imageCrystal.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]).toString();
 
 $(".crystal").on("click",function(){
     var crystalValue = ($(this).attr("data-crystalvalue"));
