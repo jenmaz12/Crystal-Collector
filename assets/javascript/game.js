@@ -1,13 +1,19 @@
 $(document).ready(function(){
 // set targetNumber equal to a random integer between 120 and 19
-var targetNumber = Math.floor(Math.random() * 120) + 19;
+var targetNumber = Math.floor(Math.random() * 101) + 19;
 // print target number to section with id targetnumber
 $("#targetnumber").html(targetNumber);
 console.log(targetNumber);
 
 // set usertotal to 0
 var userTotal = 0;
-$("#score").html(userTotal);
+$("#usertotal").html(userTotal);
+
+// set wins and losses to zero
+var wins = 0;
+$("#wins").html("Wins: " + wins);
+var losses = 0;
+$("#losses").html("Losses: " + losses);
 
 // create array of crystal values
 var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
@@ -25,11 +31,23 @@ crystal3.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)])
 crystal4.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
 
 
+// when any crystal is clicked, add the crystal's value to the userTotal and print to screen
 $(".crystal").on("click",function(){
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
     console.log(crystalValue);
     userTotal += crystalValue;
-    $("#score").html(userTotal);
-})
+    $("#usertotal").html(userTotal);
+});
+
+if (userTotal===targetNumber) {
+    $("#alert").html("You win!");
+    wins++;
+    $("#wins").html(wins);
+}
+else if (userTotal>targetNumber) {
+    $("#alert").html("You lose!");
+    losses++;
+    $("#losses").html(losses);
+};
 });
