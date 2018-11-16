@@ -27,3 +27,13 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
+#score {
+    display: block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
