@@ -14,26 +14,28 @@
     <header>
         <h1>Crystal Collector</h1>
     </header>
-    <section id="instructions">
-        <p>Each of the four crystals below has a hidden value. Click the crystals to add their value to your total. If you get your total to equal the target number, you win! If your total goes over the target number, you lose. Good luck!</p>
-    </section>
-    
-    <section id="targetnumber"></section>
-    
-    <section id="score">
-        <div id="alert"></div>
-        <div id="wins"></div>
-        <div id="losses"></div>
-    </section>
-    
-    <section id="crystals">
-        <img id="crystal1" class="crystal" src="assets/images/crystal1.png">
-        <img id="crystal2" class="crystal" src="assets/images/crystal2.png">
-        <img id="crystal3" class="crystal" src="assets/images/crystal3.png">
-        <img id="crystal4" class="crystal" src="assets/images/crystal4.png">
+    <div id="container">
+        <section id="instructions">
+            <p>Each of the four crystals below has a hidden value. Click the crystals to add their value to your total. If you get your total to equal the target number, you win! If your total goes over the target number, you lose. Good luck!</p>
+        </section>
+        
+        <section id="targetnumber"></section>
+        
+        <section id="score">
+            <div id="alert"></div>
+            <div id="wins"></div>
+            <div id="losses"></div>
+        </section>
+        
+        <section id="crystals">
+            <img id="crystal1" class="crystal" src="assets/images/crystal1.png">
+            <img id="crystal2" class="crystal" src="assets/images/crystal2.png">
+            <img id="crystal3" class="crystal" src="assets/images/crystal3.png">
+            <img id="crystal4" class="crystal" src="assets/images/crystal4.png">
 
-    </section>
-    
-    <section id="usertotal"></section>
+        </section>
+        <div id="totalheader">Your total is:</div>
+        <div id="usertotal"></div>
+    </div>
 </body>
 </html>
