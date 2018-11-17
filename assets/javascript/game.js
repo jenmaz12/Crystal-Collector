@@ -38,16 +38,27 @@ $(".crystal").on("click",function(){
     console.log(crystalValue);
     userTotal += crystalValue;
     $("#usertotal").html(userTotal);
+    // if userTotal is equal to the target number, the user wins and receives win message
+    if (userTotal===targetNumber) {
+        $("#alert").html("You win!");
+        wins++;
+        $("#wins").html("Wins: " + wins);
+        userTotal = 0;
+        $("#usertotal").html(userTotal);
+        targetNumber = Math.floor(Math.random() * 101) + 19;
+        $("#targetnumber").html(targetNumber);
+    }
+    // if userTotal is greater than the target number, the user loses and receives losing message
+    else if (userTotal>targetNumber) {
+        $("#alert").html("You lose!");
+        losses++;
+        $("#losses").html("Losses: " + losses);
+        userTotal = 0;
+        $("#usertotal").html(userTotal);
+        targetNumber = Math.floor(Math.random() * 101) + 19;
+        $("#targetnumber").html(targetNumber);
+    };
 });
 
-if (userTotal===targetNumber) {
-    $("#alert").html("You win!");
-    wins++;
-    $("#wins").html(wins);
-}
-else if (userTotal>targetNumber) {
-    $("#alert").html("You lose!");
-    losses++;
-    $("#losses").html(losses);
-};
+
 });
