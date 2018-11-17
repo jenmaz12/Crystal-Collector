@@ -18,17 +18,20 @@ header {
 #instructions {
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 33%;
-    height: 100px;
+    width: 40%;
+    height: auto;
+    overflow: auto;
     margin-top: 0;
     margin-left: 1%;
     padding-top: 1%;
     line-height: 1.5;
+    display: block;
 }
 
 .crystal {
     width: 8%;
     height: auto;
+    padding: 10px;
 }
 
 #crystals {
@@ -72,4 +75,57 @@ header {
     font-size: 40px;
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width:980px) {
+    #instructions {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+}
+
+@media screen and (max-width:640px) {
+    #instructions {
+        width: 80%;
+        margin: auto;
+    }
+    header {
+        text-align: center;
+    }
+
+    #targetandscore {
+        width: 260px;
+        margin: auto;
+        overflow: auto;
+    }
+
+    #targetnumber {
+        padding: 10px;
+    }
+    .crystal {
+        width: 70px;
+        display: block;
+        float: left;
+    }
+    #crystal3 {
+        clear: both;
+    }
+    #crystals {
+        text-align: center;
+        width: 180px;
+        margin: auto;
+        overflow: auto;
+    }
+
+    #totalheader {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #usertotal {
+        margin: auto;
+    }
 }
