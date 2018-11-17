@@ -38,7 +38,7 @@ $(".crystal").on("click",function(){
     console.log(crystalValue);
     userTotal += crystalValue;
     $("#usertotal").html(userTotal);
-    // if userTotal is equal to the target number, the user wins and receives win message
+    // if userTotal is equal to the target number, the user wins and receives win message. reset target number and user total
     if (userTotal===targetNumber) {
         $("#alert").html("You win!");
         wins++;
@@ -47,8 +47,12 @@ $(".crystal").on("click",function(){
         $("#usertotal").html(userTotal);
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#targetnumber").html(targetNumber);
+        crystal1.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal2.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal3.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal4.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
     }
-    // if userTotal is greater than the target number, the user loses and receives losing message
+    // if userTotal is greater than the target number, the user loses and receives losing message. reset target number and user total
     else if (userTotal>targetNumber) {
         $("#alert").html("You lose!");
         losses++;
@@ -57,6 +61,10 @@ $(".crystal").on("click",function(){
         $("#usertotal").html(userTotal);
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#targetnumber").html(targetNumber);
+        crystal1.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal2.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal3.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
+        crystal4.attr("data-crystalvalue",numberOptions[Math.floor(Math.random() * 11)]);
     };
 });
 
