@@ -12,6 +12,7 @@ header {
 #container {
     background-color: rgba(216, 191, 216, 0.5);
     height: 100%;
+    margin: 20px;
 
 }
 #instructions {
