@@ -1,1 +1,2 @@
-# unit-4-game
+# Crystal Collector Game
+The Crystal Collector Game was created using a combination of HTML, CSS, JavaScript, and jQuery. The goal of the game is for the user to get their total to match the target number by clicking on crystals with different, hidden values. The crystals' values are hidden from the user and change each game. If the user's total exceeds the target number, the user loses.
